@@ -22,6 +22,7 @@
 
         if (hash == '#header') {
           $('#header').removeClass('header-top');
+          $('#header-info').attr("class","a col-lg-6 order-2 order-lg-1");
           $("section").removeClass('section-show');
           if ($('body').hasClass('mobile-nav-active')) {
             $('body').removeClass('mobile-nav-active');
@@ -33,6 +34,7 @@
 
         if (!$('#header').hasClass('header-top')) {
           $('#header').addClass('header-top');
+          $('#header-info').attr("class","container");
           setTimeout(function() {
             $("section").removeClass('section-show');
             $(hash).addClass('section-show');

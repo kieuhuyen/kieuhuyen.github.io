@@ -30,7 +30,133 @@ body::before {
   height: 100vh;
   z-index: -1;
 }
+.header-top .avata {
+  display: none;
+}
+.circle {
+  width: 85px;
+  height: 85px;
+  background: #018abe;
+  border-radius: 50%;
+  opacity: 0.4;
+  position: absolute;
+  top: 150px;
+  right: 34px;
+  overflow: hidden;
+  animation: circling 18s linear infinite;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: circling;
+  z-index: 11;
+}
+.circle {
+  width: 85px;
+  height: 85px;
+  background: #018abe;
+  border-radius: 50%;
+  opacity: 0.4;
+  position: absolute;
+  top: 150px;
+  right: 175px;
+  overflow: hidden;
+  animation: circling 18s linear infinite;
+  z-index: 11;
+}
+@keyframes circling {
+  0% {
+      transform: rotate(0deg) translate(-80px) rotate(0deg);
+  }
 
+  100% {
+      transform: rotate(360deg) translate(-80px) rotate(-360deg);
+  }
+}
+@keyframes circlereverse {
+  0% {
+      transform: rotate(0deg) translate(-275px) rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(-360deg) translate(-275px) rotate(360deg);
+  }
+}
+@keyframes circle {
+  0% {
+      transform: rotate(0deg) translate(-275px) rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg) translate(-275px) rotate(-360deg);
+  }
+}
+
+@keyframes floating {
+  0% {
+      transform: translate(0px);
+  }
+
+  50% {
+      transform: translate(-50px);
+  }
+
+  100% {
+      transform: translate(0px);
+  }
+}
+
+.circle-2 {
+  width: 55px;
+  height: 55px;
+  background: #d885ff;
+  border-radius: 50%;
+  opacity: 0.4;
+  position: absolute;
+  top: 250px;
+  bottom: 250px;
+  left: -226px;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  animation: circlereverse 22s linear infinite;
+  z-index: 11;
+}
+.circle-3 {
+  width: 75px;
+  height: 75px;
+  background: #ffba20;
+  border-radius: 50%;
+  opacity: 0.4;
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 0;
+  right: 169px;
+  overflow: hidden;
+  margin: auto;
+  animation: circle 15s linear infinite;
+  z-index: 11;
+}
+.floating {
+  width: 50px;
+  height: 50px;
+  background: #d23e50;
+  border-radius: 50%;
+  opacity: 0.4;
+  position: absolute;
+  top: 10px;
+  right: 150px;
+  z-index: 1;
+  animation: floating 5s linear infinite;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
@@ -60,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   z-index: 997;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 #header * {
@@ -298,6 +424,9 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
 }
+.a
+{padding-left: 16% !important;
+  padding-top: 3%;}
 
 #header.header-top .nav-menu {
   margin: 0;
@@ -611,7 +740,7 @@ section .container {
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
   position: relative;
 }
 
